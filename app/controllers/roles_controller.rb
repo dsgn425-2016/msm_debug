@@ -4,7 +4,7 @@ class RolesController < ApplicationController
   end
 
   def show
-    @role = Role.find(params[:id])
+    @role = Role.find_by({:id=>params[:id]})
   end
 
   def new_form
