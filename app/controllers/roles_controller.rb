@@ -41,5 +41,7 @@ class RolesController < ApplicationController
     @role = Role.find(params[:id])
 
     @role.destroy
+
+    redirect_to("http://localhost:3000/roles")
   end
 end
