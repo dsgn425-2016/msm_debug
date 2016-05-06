@@ -12,7 +12,6 @@ class MoviesController < ApplicationController
 
   def create_row
     @movie = Movie.new
-    @movie.id = params[:id]
     @movie.title = params[:title]
     @movie.year = params[:year]
     @movie.duration = params[:duration]
