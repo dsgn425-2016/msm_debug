@@ -29,6 +29,7 @@ class MoviesController < ApplicationController
   end
 
   def update_row
+    @movie = Movie.find(params[:id])
     @movie.title = params[:title]
     @movie.year = params[:year]
     @movie.duration = params[:duration]
@@ -36,7 +37,9 @@ class MoviesController < ApplicationController
     @movie.image_url = params[:image_url]
     @movie.director_id = params[:director_id]
 
-    render("/ show")
+    @movie.save
+
+    render("show")
   end
 
   def destroy
