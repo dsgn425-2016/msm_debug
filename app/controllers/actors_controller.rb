@@ -1,10 +1,10 @@
 class ActorsController < ApplicationController
   def index
-    @actors = Actor.all
+    @actor = Actor.all
   end
 
   def show
-    @actor = Actor.find(params[:id])
+    @actor = Actor.find_by({ :id => params[:id]})
   end
 
   def new_form
@@ -23,11 +23,11 @@ class ActorsController < ApplicationController
   end
 
   def edit_form
-    @actor = Actor.find(params[:id])
+    @actor = Actor.find_by({ :id => params[:id]})
   end
 
   def update_row
-    @actor = Actor.find(params[:id])
+    @actor = Actor.find_by({ :id => params[:id]})
 
     @actor.dob = params[:dob]
     @actor.name = params[:name]
@@ -39,9 +39,10 @@ class ActorsController < ApplicationController
     render("show")
   end
 
-  def destroy
-    @actor = Actor.find(params[:id])
+  def delete
+    @actor = Actor.find_by({ :id => params[:id]})
 
     @actor.destroy
+    render("delete_actor")
   end
 end
