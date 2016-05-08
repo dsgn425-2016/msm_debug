@@ -12,6 +12,7 @@ class ActorsController < ApplicationController
 
   def create_row
     @actor = Actor.new
+    
     @actor.dob = params[:dob]
     @actor.name = params[:name]
     @actor.bio = params[:bio]
