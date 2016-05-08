@@ -1,4 +1,4 @@
-class RolesController < ApplicationController
+class RolesController < ApplicationController # no bugs #
   def index
     @roles = Role.all
   end
