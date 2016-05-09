@@ -4,7 +4,9 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[id])
+    @movies = Movie.all
+    @movie = Movie.find_by ({:id => params[:id]})
+
   end
 
   def new_form
