@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # READ
   get('/directors', { :controller => 'directors', :action => 'index' })
-  get('/directors/id', { :controller => 'directors', :action => 'show' })
+  get('/directors/:id', { :controller => 'directors', :action => 'show' })
 
   # UPDATE
   get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form' })
@@ -54,19 +54,19 @@ Rails.application.routes.draw do
   #------------------------------
 
   # Routes for the Actor resource:
-  # CREATE
-  get('/actors/new_form', { :controller => 'actors', :action => 'new_form' })
-  get('/create_actor', { :controller => 'actors', :action => 'create_row' })
+   # CREATE
+   get('/actors/new_form', { :controller => 'actors', :action => 'new_form' })
+   get('/create_actor', { :controller => 'actors', :action => 'create_row' })
 
-  # READ
-  get('/actors', { :controller => 'actors', :action => 'index' })
-  get('/actors/:id', { :controller => 'actors', :action => 'show' })
+   # READ
+   get('/actors', { :controller => 'actors', :action => 'index' })
+   get('/actors/:id', { :controller => 'actors', :action => 'show' })
 
-  # UPDATE
-  get('/actors/:id/edit_form', { :controller => 'actors', :action => 'edit_form' })
-  get('/update_actor/:id', { :controller => 'actors', :action => 'update_row' })
+   # UPDATE
+   get('/actors/:id/edit_form', { :controller => 'actors', :action => 'edit_form' })
+   get('/update_actor/:id', { :controller => 'actors', :action => 'update_row' })
 
-  # DELETE
-  get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy' })
-  #------------------------------
+   # DELETE
+   get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy' })
+   #------------------------------
 end
