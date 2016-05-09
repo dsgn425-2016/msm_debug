@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   get('/delete_movie/:id', { :controller => 'movies', :action => 'destroy' })
   #------------------------------
 
-  # Routes for the Role resource:
+  # Routes for the Role resource:no bugs found
   # CREATE
   get('/roles/new_form', { :controller => 'roles', :action => 'new_form' })
   get('/create_role', { :controller => 'roles', :action => 'create_row' })
