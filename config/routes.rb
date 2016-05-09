@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   # Routes for the Director resource:
   # CREATE
   get('/directors/new_form', { :controller => 'directors', :action => 'new_form' })
-  get('/create_director', { :controller => 'director', :action => 'create_row' })
+  get('/create_director', { :controller => 'directors', :action => 'create_row' })
 
   # READ
   get('/directors', { :controller => 'directors', :action => 'index' })
-  get('/directors/id', { :controller => 'directors', :action => 'show' })
+  get('/directors/:id', { :controller => 'directors', :action => 'show' })
 
   # UPDATE
   get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form' })
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   # Routes for the Movie resource:
   # CREATE
   get('/movies/new_form', { :controller => 'movies', :action => 'new_form' })
-  get('/create_movie', { :controller => 'movies', :action => 'create_row' })
+  get('/movies/create_movie', { :controller => 'movies', :action => 'create_row' })
 
   # READ
   get('/movies', { :controller => 'movies', :action => 'index' })
@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get('/update_movie/:id', { :controller => 'movies', :action => 'update_row' })
 
   # DELETE
-  get('/delete_movie/:id', { :controller => 'movies', :action => 'destroy' })
+  get("/delete_movie/:id", { :controller => "movies", :action => "destroy" })
   #------------------------------
 
   # Routes for the Role resource:
