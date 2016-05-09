@@ -18,7 +18,7 @@ class RolesController < ApplicationController
 
     @role.save
 
-    render("show")
+    redirect_to("http://localhost:3000")
   end
 
   def edit_form
