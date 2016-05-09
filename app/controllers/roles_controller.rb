@@ -12,6 +12,7 @@ class RolesController < ApplicationController
 
   def create_row
     @role = Role.new
+
     @role.character_name = params[:character_name]
     @role.movie_id = params[:movie_id]
     @role.actor_id = params[:actor_id]
