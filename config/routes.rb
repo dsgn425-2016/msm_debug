@@ -12,11 +12,11 @@ Rails.application.routes.draw do
   get('/directors/:id', { :controller => 'directors', :action => 'show' })
 
   # UPDATE
-  get('/directors/edit_form/:id', { :controller => 'directors', :action => 'edit_form' })
+  get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form' })
   get('directors/update_row/:id', { :controller => 'directors', :action => 'update_row' })
 
   # DELETE
-  get('directors/destroy/:id', { :controller => 'directors', :action => 'destroy' })
+  get('delete_director/:id', { :controller => 'directors', :action => 'destroy' })
   #------------------------------
 
   # Routes for the Movie resource:

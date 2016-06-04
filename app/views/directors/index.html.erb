@@ -18,29 +18,29 @@
   </thead>
 
   <tbody>
-    <% @directors.each do |director| %>
-      <tr>
-        <td><img src="<%= director.image_url %>" width="80"></td>
-        <td><%= director.dob %></td>
-        <td><%= director.name %></td>
-        <td><%= truncate(director.bio) %></td>
-        <td>
-          <a href="/directors/<%= director.id %>" class="btn btn-primary">
-            <i class="fa fa-search-plus"></i>
-          </a>
-        </td>
-        <td>
-          <a href="/directors/<%= director.id %>/edit_form" class="btn btn-warning">
-            <i class="fa fa-edit"></i>
-          </a>
-        </td>
-        <td>
-          <a href="/delete_director/<%= director.id %>" class="btn btn-danger">
-            <i class="fa fa-trash-o"></i>
-          </a>
-        </td>
-      </tr>
+
+    <% @director.each do |director| %>
+    <tr>
+      <td><img src="<%= director.image_url %>" width="80"></td>
+      <td><%= director.dob %></td>
+      <td><%= director.name %></td>
+      <td><%= truncate(director.bio) %></td>
+      <td>
+        <a href="/directors/<%= director.id %>" class="btn btn-primary">
+          <i class="fa fa-search-plus"></i>
+        </a>
+      </td>
+      <td>
+        <a href="/directors/<%= director.id %>/edit_form" class="btn btn-warning">
+          <i class="fa fa-edit"></i>
+        </a>
+      </td>
+      <td>
+        <a href="/delete_director/<%= director.id %>" class="btn btn-danger">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </td>
+    </tr>
     <% end %>
   </tbody>
 </table>
-
